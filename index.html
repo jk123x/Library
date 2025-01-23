@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Local Library</title>
+</head>
+<body>
+    <nav>
+        <h1>Local Library</h1>
+        <button class="add-book-btn">Add Book</button>
+    </nav>
+    <div class="container">
+        <div class="book-list">
+            <div class="empty-messsage">
+                <h3>Empty</h3>
+                <p>You haven't added any books yet</p>
+            </div>
+        </div>
+        <dialog>
+            <div class="add-book">
+                <h2>Add Book</h2>
+                <form id="add-book-form">
+                    <div class="field">
+                        <p>Title</p>
+                        <input type="text" name="title" pattern=".{1,}" placeholder="Book Name" required>
+                    </div>
+
+                    <div class="field">
+                        <p>Author</p>
+                        <input type="text" name="author" pattern=".{1,}" placeholder="Author" required>
+                    </div>
+
+                    <div class="field">
+                        <p>Pages</p>
+                        <input type="number" name="pages" pattern="\d+" placeholder="Number of pages" min="1" required>
+                    </div>
+
+                    <div class="field">
+                        <p>Read</p>
+                        <input class="checkbox" type="checkbox" name="read" placeholder="Read">
+                    </div>
+
+                    <div class="buttons">
+                        <button class="cancel-btn" type="button">Cancel</button>
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
